@@ -1,0 +1,616 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #1c1c1e;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  transition: background-color 0.4s ease-in-out;
+}
+
+/* Título do Jogo */
+#game-title {
+  font-weight: 700;
+  font-size: 2rem; /* Aumentado para um tamanho maior */
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Game Container */
+#game-container {
+  background-color: #2a2a2e;
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.5);
+  width: 90%;
+  max-width: 700px;
+  text-align: center;
+  color: #fff;
+  transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+#game-container:hover {
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.6);
+  /* Removido: transform: scale(1.02); */
+}
+
+/* Header */
+#header {
+  display: flex;
+  justify-content: space-between;
+  transition: margin-bottom 0.3s ease;
+  margin-bottom: 10px;
+}
+
+#header p {
+  font-size: 1.2rem;
+  color: #d1d1d6;
+  transition: color 0.3s ease-in-out;
+}
+
+#header p:hover {
+  color: #f9a825;
+}
+
+#hint {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #ffffff;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+#hint span {
+  font-size: 1.8rem;
+  margin-right: 8px;
+  transition: color 0.3s ease-in-out;
+}
+
+#hint:hover span {
+  color: #f9a825;
+}
+
+#hint:hover {
+  transform: scale(1.1);
+}
+
+/* Found Groups Container */
+#found-groups {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* Grid Container */
+#grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Word Block */
+.word {
+  background-color: #333333;
+  border: 2px solid #444;
+  border-radius: 6px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 400;
+  color: #f9f9f9;
+  font-size: 1rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+  height: 75px;
+  opacity: 0;
+  animation: fadeIn 0.7s ease-in-out forwards;
+}
+
+.word:hover {
+  background-color: #424242;
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.word.selected {
+  background-color: #007aff;
+  color: #fff;
+  box-shadow: 0px 10px 30px rgba(0, 122, 255, 0.6);
+  transform: scale(1.05);
+  transition: all 0.4s ease;
+}
+
+.word.found {
+  background-color: #28a745;
+  color: white;
+  cursor: default;
+  pointer-events: none;
+  transform: scale(1.1);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+/* Group Block */
+.group-block {
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+  grid-column: span 4;
+  opacity: 0;
+  animation: flipIn 1s ease forwards;
+  transition: all 0.4s ease-in-out;
+  height: 75px;
+}
+
+/* Negrito no título */
+.group-block .group-title {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Itens no tamanho regular */
+.group-block .group-items {
+  font-weight: 400;
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+/* Animação nova: Flip In */
+@keyframes flipIn {
+  0% {
+    transform: rotateY(-90deg);
+    opacity: 0;
+  }
+  50% {
+    transform: rotateY(20deg);
+    opacity: 0.5;
+  }
+  70% {
+    transform: rotateY(-10deg);
+    opacity: 0.7;
+  }
+  100% {
+    transform: rotateY(0);
+    opacity: 1;
+  }
+}
+
+.group-block:hover {
+  transform: scale(1.05);
+}
+
+/* Color Schemes for Group Blocks */
+.group-block.purple {
+  background-color: #6200ea;
+}
+
+.group-block.green {
+  background-color: #2e7d32;
+}
+
+.group-block.blue {
+  background-color: #007aff;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  } /* Sem transição de Y */
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  #game-container {
+    padding: 25px;
+  }
+
+  .word {
+    font-size: 1rem;
+    padding: 15px;
+    height: 80px;
+  }
+
+  #header p {
+    font-size: 1rem;
+  }
+
+  #hint {
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+.hint {
+  background-color: #f9a825; /* Cor de destaque para as palavras de dica */
+  color: white;
+  font-weight: bold;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.shake {
+  animation: shake 0.6s ease;
+}
+
+/* Botões de Dica e Menu */
+#controls {
+  display: flex;
+  gap: 30px;
+}
+
+#hint,
+#menu-button {
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #ffffff;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+#hint:hover,
+#menu-button:hover {
+  transform: scale(1.2);
+  color: #f9a825;
+}
+
+#hint i,
+#menu-button i {
+  font-size: 1.5rem;
+}
+
+/* Estilos do Modal */
+.modal {
+  display: none; /* Modal escondido inicialmente */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Fundo semi-transparente */
+  opacity: 0;
+  animation: fadeInModal 0.5s forwards ease-in-out; /* Animação do modal */
+}
+
+.modal-content {
+  background-color: #2a2a2e;
+  border-radius: 15px;
+  padding: 20px;
+  width: 300px;
+  max-width: 80%;
+  margin: 10% auto;
+  box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: center;
+  transform: translateY(-100px);
+  opacity: 0;
+  animation: slideDown 0.5s forwards ease-in-out;
+}
+
+.modal-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.modal-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.modal-content ul li {
+  margin: 10px 0;
+}
+
+.modal-content ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.modal-content ul li a:hover {
+  color: #f9a825;
+}
+
+/* Botão de Fechar o Modal */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #f9a825;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Animação de aparição do modal */
+@keyframes fadeInModal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Troca de Tema */
+body.light-theme {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.light-theme #game-container {
+  background-color: #f0f0f0;
+  box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme .word {
+  background-color: #eeeeee;
+  color: #000000;
+  border-color: #cccccc;
+}
+
+body.light-theme .word.selected {
+  background-color: #ff9800;
+  color: #ffffff;
+}
+
+body.light-theme .word.found {
+  background-color: #4caf50;
+  color: #ffffff;
+}
+
+body.light-theme .group-block {
+  background-color: #9c27b0;
+}
+
+body.light-theme #header p {
+  color: #000000;
+}
+
+body.light-theme #hint,
+body.light-theme #menu-button {
+  color: #000000;
+}
+
+body.light-theme #hint:hover,
+body.light-theme #menu-button:hover {
+  color: #ff9800;
+}
+
+body.light-theme #game-title {
+  color: #000000; /* Título preto no modo claro */
+}
+
+/* Ajuste para o modo escuro */
+body:not(.light-theme) #game-title {
+  color: #ffffff;
+}
+
+body:not(.light-theme) #theme-toggle {
+  color: #ffffff; /* Botão de tema preto no modo escuro */
+}
+
+body:not(.light-theme) #theme-toggle:hover {
+  color: #ff9800; /* Hover do Botão de tema laranja no modo escuro */
+}
+
+body.light-theme #theme-toggle {
+  color: #000000; /* Botão de tema preto no modo claro */
+}
+
+body.light-theme #theme-toggle:hover {
+  color: #ff9800; /* Hover do Botão de tema laranja no modo claro */
+}
+
+/* Animação da troca de tema */
+#theme-toggle {
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #ffffff;
+  transition: transform 0.5s ease-in-out;
+}
+
+#theme-toggle:hover {
+  transform: scale(1.2);
+}
+
+#theme-toggle i {
+  transition: transform 0.6s ease-in-out;
+}
+
+.rotate-flip {
+  animation: rotateFlip 0.6s ease-in-out;
+}
+
+/* Animação personalizada - "flip" vertical com rotação 3D */
+@keyframes rotateFlip {
+  0% {
+    transform: rotateY(0deg) rotateX(0deg);
+  }
+  50% {
+    transform: rotateY(90deg) rotateX(10deg);
+    opacity: 0.5;
+  }
+  100% {
+    transform: rotateY(180deg) rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+/* Responsiveness - ajuste do botão de tema */
+@media (max-width: 768px) {
+  #controls {
+    gap: 20px;
+  }
+
+  #theme-toggle {
+    font-size: 1.5rem;
+  }
+}
+
+/* Botões de Dica, Menu e Troca de Tema */
+#controls {
+  display: flex;
+  gap: 30px;
+}
+
+#theme-toggle {
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #ffffff;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+#theme-toggle:hover {
+  transform: scale(1.2);
+  color: #f9a825;
+}
+
+#theme-toggle i {
+  font-size: 1.5rem;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+/* Estilos para os novos modais */
+#how-to-play-modal,
+#about-modal {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  animation: fadeInModal 0.5s forwards ease-in-out;
+}
+
+#how-to-play-modal .modal-content,
+#about-modal .modal-content {
+  background-color: #2a2a2e;
+  border-radius: 15px;
+  padding: 20px;
+  width: 300px;
+  max-width: 80%;
+  margin: 10% auto;
+  box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: center;
+  transform: translateY(-100px);
+  opacity: 0;
+  animation: slideDown 0.5s forwards ease-in-out;
+}
+
+#how-to-play-modal h2,
+#about-modal h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+#how-to-play-modal p,
+#about-modal p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+#how-to-play-modal ul {
+  list-style: disc;
+  padding-left: 20px;
+  text-align: left;
+}
+
+#how-to-play-modal ul li {
+  margin-bottom: 10px;
+}
+
+/* Botão de Fechar o Modal */
+#how-to-play-modal .close,
+#about-modal .close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#how-to-play-modal .close:hover,
+#about-modal .close:hover {
+  color: #f9a825;
+  text-decoration: none;
+}

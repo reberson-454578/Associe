@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Associe</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="responsividade.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+  </head>
+  <body>
+    <!-- Título do jogo fora do game-container -->
+    <h1 id="game-title">Associe</h1>
+
+    <div id="game-container">
+      <div id="header">
+        <p id="attempts-display">Tentativas: 0</p>
+        <div id="controls">
+          <div id="hint" onclick="giveHint()">
+            <i class="fas fa-lightbulb"></i>
+          </div>
+          <div id="theme-toggle" onclick="toggleTheme()">
+            <i class="fas fa-moon"></i>
+          </div>
+          <div id="menu-button" onclick="openMenuModal()">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Grid Container -->
+      <div id="grid-container"></div>
+
+      <!-- Menu Modal -->
+      <div id="menu-modal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeMenuModal()">&times;</span>
+          <h2>Menu</h2>
+          <ul>
+            <li><a href="#" onclick="openHowToPlay()">Como Jogar</a></li>
+            <li><a href="#" onclick="openAbout()">Sobre</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Como Jogar Modal -->
+      <div id="how-to-play-modal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeHowToPlay()">&times;</span>
+          <h2>Como Jogar</h2>
+          <p>
+            <strong>Associe</strong> é um jogo de associação de palavras. O
+            objetivo é encontrar 4 grupos de palavras relacionadas entre si.
+          </p>
+          <ul>
+            <li>Selecione quatro palavras clicando nelas.</li>
+            <li>
+              Se as quatro palavras pertencerem ao mesmo grupo, elas serão
+              removidas do tabuleiro.
+            </li>
+            <li>Continue até encontrar todos os grupos.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Sobre Modal -->
+      <div id="about-modal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeAbout()">&times;</span>
+          <h2>Sobre</h2>
+          <p>
+            <strong>Associe</strong> foi inspirado no jogo Conexo, créditos ao
+            criador original: <strong>"Daydash"</strong>.<br /><br />Divirta-se
+            associando palavras!
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

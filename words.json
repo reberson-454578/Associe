@@ -1,0 +1,32 @@
+{
+  "words": [
+    "SHREK",
+    "CARROS",
+    "A VIAJEM DE CHIHIRO",
+    "O CASTELO ANIMADO",
+    "EVIDÊNCIAS",
+    "PISTAS",
+    "SINAIS",
+    "VESTÍGIOS",
+    "SINÔNIMOS",
+    "SOZINHO",
+    "EXAGERADO",
+    "MENINA VENENO",
+    "AVIÃO",
+    "CARRO",
+    "METRÔ",
+    "ÔNIBUS"
+  ],
+  "groups": [
+    ["SHREK", "CARROS", "A VIAJEM DE CHIHIRO", "O CASTELO ANIMADO"],
+    ["EVIDÊNCIAS", "PISTAS", "SINAIS", "VESTÍGIOS"],
+    ["SINÔNIMOS", "SOZINHO", "EXAGERADO", "MENINA VENENO"],
+    ["AVIÃO", "CARRO", "METRÔ", "ÔNIBUS"]
+  ],
+  "groupTitles": [
+    "Filmes Animados",
+    "Indícios",
+    "Músicas Clássicas",
+    "Meios de Transporte"
+  ]
+}

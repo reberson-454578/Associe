@@ -1,0 +1,123 @@
+/* Ajustes para o container de grupos formados */
+#found-groups {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* 1 coluna por padrão */
+  gap: 15px;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* Ajuste do container em telas menores */
+@media (max-width: 1024px) {
+  #found-groups {
+    grid-template-columns: repeat(1, 1fr); /* Mantém 1 coluna em telas médias */
+  }
+
+  .group-block {
+    padding: 10px; /* Reduz o padding */
+    font-size: 0.9rem; /* Diminui a fonte do grupo e dos itens */
+    height: 65px; /* Diminui a altura do bloco */
+  }
+}
+
+@media (max-width: 768px) {
+  #found-groups {
+    grid-template-columns: repeat(1, 1fr); /* Mantém 1 coluna */
+  }
+
+  .group-block {
+    padding: 8px; /* Reduz o padding ainda mais */
+    font-size: 0.8rem; /* Fonte menor para grupos */
+    height: 55px; /* Ajusta a altura do bloco */
+  }
+
+  #grid-container {
+    grid-template-columns: repeat(
+      4,
+      1fr
+    ); /* Mantém 4 colunas em telas menores */
+    gap: 10px; /* Ajusta o gap entre os blocos */
+  }
+
+  .word {
+    padding: 8px; /* Diminui o padding das palavras */
+    font-size: 0.85rem; /* Reduz o tamanho da fonte das palavras */
+    height: 55px; /* Ajusta a altura dos blocos */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Centraliza o texto */
+    white-space: nowrap; /* Garante que o texto não quebre linha */
+  }
+}
+
+@media (max-width: 480px) {
+  #found-groups {
+    grid-template-columns: repeat(
+      1,
+      1fr
+    ); /* Mantém 1 coluna em telas muito pequenas */
+    gap: 10px;
+  }
+
+  .group-block {
+    padding: 1px; /* Padding ainda menor */
+    font-size: 0.7rem; /* Fonte menor para grupos em telas pequenas */
+    height: 45px; /* Ajusta ainda mais a altura */
+  }
+
+  #grid-container {
+    grid-template-columns: repeat(4, 1fr); /* Mantém 4 colunas */
+    gap: 8px; /* Ajusta o gap para telas pequenas */
+  }
+
+  .word {
+    padding: 3px; /* Diminui ainda mais o padding das palavras */
+    font-size: 0.5rem; /* Reduz ainda mais o tamanho da fonte */
+    height: 40px; /* Ajusta a altura dos blocos */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Centraliza o texto */
+    white-space: nowrap; /* Evita quebra de linha nas palavras grandes */
+  }
+}
+
+/* Ajuste para o título e itens de cada grupo */
+.group-block .group-title {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.group-block .group-items {
+  font-weight: 400;
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+@media (max-width: 480px) {
+  .group-block .group-title {
+    font-size: 0.9rem; /* Tamanho menor para títulos em telas muito pequenas */
+  }
+
+  .group-block .group-items {
+    font-size: 0.8rem; /* Ajusta o tamanho dos itens do grupo em telas pequenas */
+    width: 30px;
+  }
+
+  /* Ajustes para o título e os controles de ícone em telas pequenas */
+  #game-title {
+    font-size: 1.5rem; /* Ajuste do tamanho do título */
+  }
+
+  #controls {
+    gap: 15px; /* Reduz o espaçamento entre os botões de controle */
+  }
+
+  #hint i,
+  #theme-toggle i,
+  #menu-button i {
+    font-size: 1.3rem; /* Reduz o tamanho dos ícones */
+  }
+}
