@@ -148,6 +148,10 @@ document.addEventListener("DOMContentLoaded", () => {
           hideWords(foundGroup);
           selectedWords = [];
           saveProgress();
+
+          if (foundGroups.length === 4) {
+            showVictoryModal(); // Exibe o modal de vitória
+          }
         } else {
           selectedWords.forEach((word) => {
             const wordElement = wordElements.find(
@@ -375,4 +379,18 @@ function closeAbout() {
   const aboutModal = document.getElementById("about-modal");
   aboutModal.style.display = "none";
   aboutModal.classList.remove("active");
+}
+
+// Função para exibir o modal de vitória
+function showVictoryModal() {
+  const victoryModal = document.getElementById("victory-modal");
+  victoryModal.style.display = "block";
+  victoryModal.classList.add("active");
+}
+
+// Função para fechar o modal de vitória
+function closeVictoryModal() {
+  const victoryModal = document.getElementById("victory-modal");
+  victoryModal.style.display = "none";
+  victoryModal.classList.remove("active");
 }
