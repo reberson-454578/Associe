@@ -1,32 +1,27 @@
 {
   "words": [
-    "SHREK",
-    "CARROS",
-    "A VIAJEM DE CHIHIRO",
-    "O CASTELO ANIMADO",
-    "EVIDÊNCIAS",
-    "PISTAS",
-    "SINAIS",
-    "VESTÍGIOS",
-    "SINÔNIMOS",
-    "SOZINHO",
-    "EXAGERADO",
-    "MENINA VENENO",
-    "AVIÃO",
-    "CARRO",
-    "METRÔ",
-    "ÔNIBUS"
+    "ESCORPIÃO",
+    "LIBRA",
+    "CÂNCER",
+    "TOURO",
+    "DÓLAR",
+    "EURO",
+    "PESO",
+    "REAL",
+    "ESCALA",
+    "RITMO",
+    "MELODIA",
+    "OITAVA",
+    "BARATA",
+    "LAGARTA",
+    "BORBOLETA",
+    "BESOURO"
   ],
   "groups": [
-    ["SHREK", "CARROS", "A VIAJEM DE CHIHIRO", "O CASTELO ANIMADO"],
-    ["EVIDÊNCIAS", "PISTAS", "SINAIS", "VESTÍGIOS"],
-    ["SINÔNIMOS", "SOZINHO", "EXAGERADO", "MENINA VENENO"],
-    ["AVIÃO", "CARRO", "METRÔ", "ÔNIBUS"]
+    ["ESCORPIÃO", "LIBRA", "CÂNCER", "TOURO"],
+    ["DÓLAR", "EURO", "PESO", "REAL"],
+    ["ESCALA", "RITMO", "MELODIA", "OITAVA"],
+    ["BARATA", "LAGARTA", "BORBOLETA", "BESOURO"]
   ],
-  "groupTitles": [
-    "Filmes Animados",
-    "Indícios",
-    "Músicas Clássicas",
-    "Meios de Transporte"
-  ]
+  "groupTitles": ["Signos", "Moedas Internacionais", "Música", "Insetos"]
 }
