@@ -1,27 +1,32 @@
 {
   "words": [
-    "ESCORPIÃO",
-    "LIBRA",
-    "CÂNCER",
-    "TOURO",
-    "DÓLAR",
-    "EURO",
-    "PESO",
-    "REAL",
-    "ESCALA",
-    "RITMO",
-    "MELODIA",
-    "OITAVA",
-    "BARATA",
-    "LAGARTA",
-    "BORBOLETA",
-    "BESOURO"
+    "PARALELEPÍPEDO",
+    "HIPOTENUSA",
+    "CÚPULA",
+    "PARADOXO",
+    "INÉRCIA",
+    "GRAVIDADE",
+    "ÓRBITA",
+    "EXÓTICO",
+    "PAVILHÃO",
+    "ESPECTRO",
+    "RESILIÊNCIA",
+    "ESTRATOSFERA",
+    "CÂNION",
+    "DUNA",
+    "MIRAGEM",
+    "FUSÃO"
   ],
   "groups": [
-    ["ESCORPIÃO", "LIBRA", "CÂNCER", "TOURO"],
-    ["DÓLAR", "EURO", "PESO", "REAL"],
-    ["ESCALA", "RITMO", "MELODIA", "OITAVA"],
-    ["BARATA", "LAGARTA", "BORBOLETA", "BESOURO"]
+    ["PARALELEPÍPEDO", "HIPOTENUSA", "CÚPULA", "PARADOXO"],
+    ["INÉRCIA", "GRAVIDADE", "ÓRBITA", "EXÓTICO"],
+    ["PAVILHÃO", "ESPECTRO", "RESILIÊNCIA", "ESTRATOSFERA"],
+    ["CÂNION", "DUNA", "MIRAGEM", "FUSÃO"]
   ],
-  "groupTitles": ["Signos", "Moedas Internacionais", "Música", "Insetos"]
+  "groupTitles": [
+    "Formas e Conceitos",
+    "Forças e Movimento",
+    "Estruturas e Fenômenos",
+    "Paisagens e Ilusões"
+  ]
 }
