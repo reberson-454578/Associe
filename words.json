@@ -1,27 +1,27 @@
 {
   "words": [
-    "CINZA",
-    "AZUL",
-    "VERDE",
-    "PRETO",
-    "HOMEM",
-    "MULHER",
-    "MENINA",
-    "MENINO",
-    "MAÇÃ",
-    "UVA",
-    "PÊRA",
-    "MELANCIA",
-    "CACHORRO",
-    "GATO",
-    "PORCO",
-    "CAVALO"
+    "FERRARI",
+    "BMW",
+    "AUDI",
+    "MERCEDES",
+    "LEÃO",
+    "TIGRE",
+    "ELEFANTE",
+    "RINOCERONTE",
+    "PÃO",
+    "ARROZ",
+    "FEIJÃO",
+    "MASSA",
+    "SOFÁ",
+    "CADEIRA",
+    "MESA",
+    "CAMA"
   ],
   "groups": [
-    ["CINZA", "AZUL", "VERDE", "PRETO"],
-    ["HOMEM", "MULHER", "MENINA", "MENINO"],
-    ["MAÇÃ", "UVA", "PÊRA", "MELANCIA"],
-    ["CACHORRO", "GATO", "PORCO", "CAVALO"]
+    ["FERRARI", "BMW", "AUDI", "MERCEDES"],
+    ["LEÃO", "TIGRE", "ELEFANTE", "RINOCERONTE"],
+    ["PÃO", "ARROZ", "FEIJÃO", "MASSA"],
+    ["SOFÁ", "CADEIRA", "MESA", "CAMA"]
   ],
-  "groupTitles": ["Cores", "Ser humano", "Frutas", "Animais de estimação"]
+  "groupTitles": ["Carros", "Animais selvagens", "Comidas", "Móveis"]
 }
