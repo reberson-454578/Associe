@@ -1,32 +1,27 @@
 {
   "words": [
-    "PARALELEPÍPEDO",
-    "HIPOTENUSA",
-    "CÚPULA",
-    "PARADOXO",
-    "INÉRCIA",
-    "GRAVIDADE",
-    "ÓRBITA",
-    "EXÓTICO",
-    "PAVILHÃO",
-    "ESPECTRO",
-    "RESILIÊNCIA",
-    "ESTRATOSFERA",
-    "CÂNION",
-    "DUNA",
-    "MIRAGEM",
-    "FUSÃO"
+    "CINZA",
+    "AZUL",
+    "VERDE",
+    "PRETO",
+    "HOMEM",
+    "MULHER",
+    "MENINA",
+    "MENINO",
+    "MAÇÃ",
+    "UVA",
+    "PÊRA",
+    "MELANCIA",
+    "CACHORRO",
+    "GATO",
+    "PORCO",
+    "CAVALO"
   ],
   "groups": [
-    ["PARALELEPÍPEDO", "HIPOTENUSA", "CÚPULA", "PARADOXO"],
-    ["INÉRCIA", "GRAVIDADE", "ÓRBITA", "EXÓTICO"],
-    ["PAVILHÃO", "ESPECTRO", "RESILIÊNCIA", "ESTRATOSFERA"],
-    ["CÂNION", "DUNA", "MIRAGEM", "FUSÃO"]
+    ["CINZA", "AZUL", "VERDE", "PRETO"],
+    ["HOMEM", "MULHER", "MENINA", "MENINO"],
+    ["MAÇÃ", "UVA", "PÊRA", "MELANCIA"],
+    ["CACHORRO", "GATO", "PORCO", "CAVALO"]
   ],
-  "groupTitles": [
-    "Formas e Conceitos",
-    "Forças e Movimento",
-    "Estruturas e Fenômenos",
-    "Paisagens e Ilusões"
-  ]
+  "groupTitles": ["Cores", "Ser humano", "Frutas", "Animais de estimação"]
 }
