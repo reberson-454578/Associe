@@ -1,27 +1,32 @@
 {
   "words": [
-    "FERRARI",
-    "BMW",
-    "AUDI",
-    "MERCEDES",
-    "LEÃO",
-    "TIGRE",
-    "ELEFANTE",
-    "RINOCERONTE",
-    "PÃO",
-    "ARROZ",
-    "FEIJÃO",
-    "MASSA",
-    "SOFÁ",
-    "CADEIRA",
-    "MESA",
-    "CAMA"
+    "HÉRCULES",
+    "APOLO",
+    "ZEUS",
+    "ARES",
+    "RÍMEL",
+    "BATOM",
+    "LÁPIS",
+    "PÓ",
+    "TUNGSTÊNIO",
+    "PLUTÔNIO",
+    "URÂNIO",
+    "RADÔNIO",
+    "QUASAR",
+    "BURACO NEGRO",
+    "NEBULOSA",
+    "SUPERNOVA"
   ],
   "groups": [
-    ["FERRARI", "BMW", "AUDI", "MERCEDES"],
-    ["LEÃO", "TIGRE", "ELEFANTE", "RINOCERONTE"],
-    ["PÃO", "ARROZ", "FEIJÃO", "MASSA"],
-    ["SOFÁ", "CADEIRA", "MESA", "CAMA"]
+    ["HÉRCULES", "APOLO", "ZEUS", "ARES"],
+    ["RÍMEL", "BATOM", "LÁPIS", "PÓ"],
+    ["TUNGSTÊNIO", "PLUTÔNIO", "URÂNIO", "RADÔNIO"],
+    ["QUASAR", "BURACO NEGRO", "NEBULOSA", "SUPERNOVA"]
   ],
-  "groupTitles": ["Carros", "Animais selvagens", "Comidas", "Móveis"]
+  "groupTitles": [
+    "Deuses da mitologia",
+    "Maquiagem",
+    "Elementos radioativos",
+    "Fenômenos astronômicos"
+  ]
 }
